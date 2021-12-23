@@ -2,22 +2,41 @@
 This repository contains the code for the second ML project 2 ML4Science, performed in the Gönczy Lab – Cell and Developmental Biology at EPFL.
 
 ## Team members
-* Antoine Daeniker
-* Oliver Becker
-* Tim Poštuvan
+* Antoine Daeniker antoine.daeniker@epfl.ch
+* Oliver Becker oliver.becker@epfl.ch
+* Tim Poštuvan tim.postuvan@epfl.ch
 
 ## Project Layout
-
-
-## Installation
-
-### Requirements
-
-
-### Instructions
-
+Determination of the number of centrioles is central to
+better understand their role in cancer since centrosome amplification
+often occurs in cancer cells. To detect centrioles, we propose approach
+based on semantic segmentation of centrioles. Furthermore, we seg-
+ment nuclei and assign centrioles to them in unsupervised manner.
+Assignment is done by defining the problem as minimum weight
+matching in bipartite graph with prior greedy matching. This allows
+to incorporate domain-knowledge that each nuclei can have at most
+four centrioles. Our approach is also evaluated at all stages, except for
+nuclei segmentation.
 
 ## Run
+### Download the data
+Download the data in this drive: https://drive.google.com/drive/folders/1pQUSt-qwXfVtIBig7JElVzEM0tWha2I0?usp=sharing.
+
+$root
+
+|-- dataset
+
+|-- experiments
+
+`
+|
+`
+
+|-- src
+
+
+### Install requirement
+run : [pip install -r requirements.txt]
 
 ### Run U-Net
 To run the test of the U-Net and give out predictions use the following command inside the `src` folder:
