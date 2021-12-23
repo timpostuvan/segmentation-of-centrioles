@@ -44,6 +44,7 @@ To run the test of the U-Net and give out predictions use the following command 
        python3 run.py --config ../experiments/full_experiment_single_channel.json --num_workers 0
 
 The script automatically runs the test if it finds weights in the according folder `source/checkpoints`. To train remove the weight. 
+
 Explore how to test or train the U-Net with the corresponding json under `experiments`:
 `full_experiment_single_channel`  - Runs the U-Net on the single channel images.
 
