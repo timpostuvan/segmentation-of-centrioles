@@ -24,7 +24,10 @@ To run the test of the U-Net and give out predictions use the following command 
         
        python 3 run.py --config ../experiments/full_experiment_single_channel.json --num_workers 0
 
-To train the U-Net use the corresponding json under `experiments`.
+Explore how to train the U-Net with the corresponding json under `experiments`:
+`full_experiment_single_channel`  - Runs the U-Net on the single channel images
+`full_experiment_all_channels` – Runs the U-Net on the images which combine all channels
+Further you can run it with no attention for single and all channels (`no_attention_single_channel` and no_attention_all_channels) and no data augmentation (`no_data_augmentation_all_channels` and `no_data_augmentation_single_channel`)
 
 ### Run center detection
 The notebook 'perd_mask_view.ipynb' load every data according to our masks predictions and perform the center detection. Then it will write all detected coordinates in a csv file named 'predictions_annotation.csv' which will be located in 'dataset/single-channel-images' folder.
