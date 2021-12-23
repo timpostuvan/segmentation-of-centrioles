@@ -38,6 +38,9 @@ $root
 ### Install requirement
 run : [pip install -r requirements.txt]
 
+## Run
+First downloaded the data to get the tif’s, run the U-Net to get predictions, run center detection to get centrioles and run the matching to assign centrioles to nuclei. 
+
 ### Run U-Net
 To run the test of the U-Net and give out predictions use the following command inside the `src` folder:
         
