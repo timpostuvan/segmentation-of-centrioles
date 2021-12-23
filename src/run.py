@@ -25,6 +25,12 @@ from train import train
 
 
 def arg_parse():
+    """
+    Add element to parser from the cmd line
+
+    Returns:
+        parser: the parser with all parse argument from the cmd line
+    """
     parser = argparse.ArgumentParser(description='Centriole segmentation arguments.')
 
     parser.add_argument("--config", type=str, required=True, 
@@ -91,7 +97,8 @@ if __name__ == '__main__':
 
     data_augmentation = {}
     if(config["dataset"]["data_augmentation"]):
-        data_augmentation["both"] = transforms.Compose([transforms.RandomHorizontalFlip(p=0.2),
+        data_augmentation["both"] = transforms.Compose([
+                                                        transforms.RandomHorizontalFlip(p=0.2),
                                                         transforms.RandomVerticalFlip(p=0.2)
                                                     ])
         data_augmentation["image"] = transforms.Compose([preprocessing.RandomGaussianNoise(mean=0, std=1)])
