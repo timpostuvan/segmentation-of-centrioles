@@ -1,10 +1,10 @@
 # CS-433 Machine Learning - Semantic Segmentation of Centrioles in Human Cells and Assigning Them to Nuclei
-This repository contains the code for the second ML project 2 Sience4Labs, done in the Gönczy Lab – Cell and Developmental Biology at EPFL.
+This repository contains the code for the second ML project 2 ML4Science, performer in the Gönczy Lab – Cell and Developmental Biology at EPFL.
 
 ## Team members
 * Antoine Daeniker
 * Oliver Becker
-* Tim Postuvan
+* Tim Poštuvan
 
 ## Project Layout
 
