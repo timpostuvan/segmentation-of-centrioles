@@ -34,21 +34,21 @@ class SE_Block(nn.Module):
 	"""
 	Represent block that are added if we want attention
 	"""
-    def __init__(self, in_channels, r=8):
-        super().__init__()
-        self.squeeze = nn.AdaptiveAvgPool2d(1)
-        self.excitation = nn.Sequential(
-            nn.Linear(in_channels, in_channels // r, bias=False),
-            nn.ReLU(inplace=True),
-            nn.Linear(in_channels // r, in_channels, bias=False),
-            nn.Sigmoid()
-        )
+	def __init__(self, in_channels, r=8):
+		super().__init__()
+		self.squeeze = nn.AdaptiveAvgPool2d(1)
+		self.excitation = nn.Sequential(
+			nn.Linear(in_channels, in_channels // r, bias=False),
+			nn.ReLU(inplace=True),
+			nn.Linear(in_channels // r, in_channels, bias=False),
+			nn.Sigmoid()
+		)
 
-    def forward(self, x):
-        batch_size, channels, _, _ = x.shape
-        weight = self.squeeze(x).view(batch_size, channels)
-        weight = self.excitation(weight).view(batch_size, channels, 1, 1)
-        return x * weight.expand(x.shape)
+	def forward(self, x):
+		batch_size, channels, _, _ = x.shape
+		weight = self.squeeze(x).view(batch_size, channels)
+		weight = self.excitation(weight).view(batch_size, channels, 1, 1)
+		return x * weight.expand(x.shape)
 
 
 
