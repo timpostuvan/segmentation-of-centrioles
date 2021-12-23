@@ -25,6 +25,6 @@ This repository contains the code for the second ML project 2 ML4Science, perfor
        python ...
        
 ### Matching
-The notebook `matching.ipynb` shows and explains our matching procedure. 
+The notebook `matching.ipynb` shows and explains our matching procedure, from loading the tif image over using StarDist and creating a matching. 
 The notebook `matching_bipartite.ipynb` shows and explains bipartite only matching procedure. 
 
