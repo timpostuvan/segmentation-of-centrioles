@@ -28,3 +28,5 @@ This repository contains the code for the second ML project 2 ML4Science, perfor
 The notebook `matching.ipynb` shows and explains our matching procedure, from loading the tif image over using StarDist and creating a matching. 
 The notebook `matching_bipartite.ipynb` shows and explains bipartite only matching procedure. 
 
+### Create one image from all channels
+To merge the channel images into one image we created the 'create_channel_images.ipynb' notebook. This goes through the procedure to create the all channel images.
