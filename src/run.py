@@ -29,7 +29,7 @@ def arg_parse():
     Add element to parser from the cmd line
 
     Returns:
-        parser: the parser with all parse argument from the cmd line
+        parser: the parser with all parse argument from the command line
     """
     parser = argparse.ArgumentParser(description='Centriole segmentation arguments.')
 
@@ -161,7 +161,7 @@ if __name__ == '__main__':
                                                constants.FULL_IMAGE_HEIGHT),
 										interpolation=InterpolationMode.NEAREST)
 
-
+    # generate and store predictions
     predictions_path = f'{args.dataset_dir}/{channels_dir}/predictions/{args.config.split("/")[-1][:-5]}'
     Path(predictions_path).mkdir(parents=True, exist_ok=True)
     test_predictions = [f'{predictions_path}/{image.split("/")[-1]}' for image in test_masks]       

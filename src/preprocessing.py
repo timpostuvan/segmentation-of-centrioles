@@ -20,10 +20,10 @@ class RandomGaussianNoise(object):
 
 def standardize_patch(image):
     """
-    standardize a tensor patch
+    Standardize a tensor patch
 
     Args:
-        image : the image to be standardize
+        image : the image to be standardized
 
     Returns:
         image: the standardized image
@@ -38,10 +38,10 @@ def standardize_patch(image):
 
 def normalize(image):
     """
-    normalize each channel separately to [0, 1]
+    Normalize each channel separately to [0, 1] interval
 
     Args:
-        image : the image to be normalize
+        image : the image to be normalized
 
     Returns:
         normalized_image: the normalized image
@@ -61,10 +61,10 @@ def normalize(image):
 
 def log_normalize(image):
     """
-    normalize log of each channel separately to [0, 1]
+    Normalize log of each channel separately to [0, 1] interval
 
     Args:
-        image : the image to be log normalize
+        image : the image to be log normalized
 
     Returns:
         normalized_image: the log normalize image
@@ -87,7 +87,7 @@ def thresholded_normalize(image, percentile=95):
     Normalize image data that are above the percentile argument
 
     Args:
-        image : the image to be normalize
+        image : the image to be normalized
         percentile (int, optional): threshold quantity. Defaults to 95.
 
     Returns:
@@ -108,13 +108,13 @@ def thresholded_normalize(image, percentile=95):
 
 def standardize(image):
     """
-    standardize each channel separately
+    Standardize each channel separately
 
     Args:
-        image : the set of images to be normalized separetly
+        image : the image to be normalized
 
     Returns:
-        standardized_image: set of standardized images
+        standardized_image: the standardized image
     """
 
     standardized_image = np.zeros(image.shape, dtype=np.float)
@@ -136,7 +136,7 @@ def nonmaxima_suppression_box(image, size=3):
         size (int, optional): kernel size. Defaults to 3.
 
     Returns:
-        image: modify image after nonmaxima suppression function
+        image: the image with non-maxima suppressed
     """
     domain = np.ones((size, size))
     max_val = signal.order_filter(image, domain, 8)

@@ -19,7 +19,7 @@ def build_optimizer(config, params):
     Build the optimizer
 
     Args:
-        config : choose which optimizer, lerning rate, weight_decay we want
+        config : defines optimizer, learning rate, and weight decay
         params : filter parameter
 
     Returns:
@@ -42,14 +42,14 @@ def train(model, dataloaders, args, config):
     Training procedure of the model
 
     Args:
-        model : the model we choose
-        dataloaders : represent the dataset
-        args : args to use wandb
-        config : procedure configurations
+        model : the model to train
+        dataloaders : loaders of the datasets
+        args : arguments such as whether to use wandb
+        config : training configuration
 
     Returns:
-        best_model : the best model during the training procedure
-        final_scores : all results from the testing procedure
+        best_model : the best version of the model according to validation F1-score
+        final_scores : metrics for the best version of the model on test set
     """
     opt = build_optimizer(config["training"], model.parameters())
 
@@ -129,13 +129,13 @@ def test(dataloaders, model, args, config):
     Testing procedure
 
     Args:
-        dataloaders : represent the dataset
-        model : the model we choose
-        args : args to use wandb
-        config : procedure configurations
+        model : the model to test
+        dataloaders : loaders of the datasets
+        args : arguments such as device
+        config : testing configuration
 
     Returns:
-        scores : test results using training prediction
+        scores : metrics reported on all train/validation/test sets
     """
     model.eval()
 

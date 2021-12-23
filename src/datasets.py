@@ -17,12 +17,12 @@ def image_mask_preprocessing(image_path, mask_path, dataset_config):
 	Load and pre-process images and mask according to dataset_config
 
 	Args:
-		image_path (string): the path to images dataset folder
-		mask_path (string): the path to gt mask dataset folder
-		dataset_config : configs for loading dataset
+		image_path (string): the path to an image instance
+		mask_path (string): the path to a mask instance
+		dataset_config : configs for pre-processing of the dataset
 
 	Returns:
-		image : preprocessed image
+		image : pre-processed image
 		mask : mask
 	"""
 	# load the image from disk and read the associated mask from disk in grayscale mode
@@ -58,7 +58,7 @@ class SegmentationCentrioleTrain(Dataset):
 	Represent our centriol train dataset for the segmetation model
 
 	Args:
-		Dataset : centriol dataset
+		Dataset : centriole dataset
 	"""
 	def __init__(self, image_paths, mask_paths, dataset_config, transform=None, data_augmentation=None):
 		# store the image and mask filepaths, and augmentation
@@ -161,7 +161,7 @@ class SegmentationCentrioleTest(Dataset):
 	Represent our centriol test dataset for the segmetation model
 
 	Args:
-		Dataset : centriol dataset
+		Dataset : centriole dataset
 	"""
 	def __init__(self, image_paths, mask_paths, dataset_config, transform=None):
 		# store the image and mask filepaths, and augmentation

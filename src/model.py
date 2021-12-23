@@ -10,7 +10,7 @@ import constants
 
 class FocalLoss(nn.Module):
 	"""
-	Represent the focal loss
+	Represent the Focal Loss
 	"""
 	def __init__(self, alpha=0.005, gamma=2):
 		super(FocalLoss, self).__init__()
@@ -32,7 +32,7 @@ class FocalLoss(nn.Module):
 
 class SE_Block(nn.Module):
 	"""
-	Represent block that are added if we want attention
+	Represent Squeeze-and-Excitation block
 	"""
 	def __init__(self, in_channels, r=8):
 		super().__init__()
@@ -54,7 +54,7 @@ class SE_Block(nn.Module):
 
 class Block(nn.Module):
 	"""
-	Represent block layer use  in the model
+	Represent block layer in U-Net encoder and decoder
 	"""
 	def __init__(self, in_channels, out_channels):
 		super().__init__()
@@ -76,7 +76,7 @@ class Block(nn.Module):
 
 class Encoder(nn.Module):
 	"""
-	Represent the first part of the U-Net, namely the encoder part
+	Represent the encoder part of the U-Net
 	"""
 	def __init__(self, channels=(3, 16, 32, 64), attention=True):
 		super().__init__()
@@ -111,7 +111,7 @@ class Encoder(nn.Module):
 
 class Decoder(nn.Module):
 	"""
-	Represent the second part of the U-Net, namely the decoder part
+	Represent the decoder part of the U-Net
 	"""
 	def __init__(self, channels=(64, 32, 16), attention=True, dropout_p=0.1):
 		super().__init__()
