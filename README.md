@@ -30,7 +30,7 @@ To train the U-Net use the corresponding json under `experiments`.
 The notebook 'perd_mask_view.ipynb' load every data according to our masks predictions and perform the center detection. Then it will write all detected coordinates in a csv file named 'predictions_annotation.csv' which will be located in 'dataset/single-channel-images' folder.
        
 ### Run Matching
-The notebook `matching.ipynb` shows and explains our matching procedure, from loading the tif image over using StarDist and creating a matching. 
+The notebook `matching.ipynb` shows and explains our matching procedure, everything from loading the tif image to using StarDist and creating a matching. 
 The notebook `matching_bipartite.ipynb` shows and explains bipartite only matching procedure. 
 
 ## Data and preparations
