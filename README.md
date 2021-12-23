@@ -32,7 +32,7 @@ Explore how to train the U-Net with the corresponding json under `experiments`:
 Further you can run it with no attention for single and all channels (`no_attention_single_channel` and no_attention_all_channels) and no data augmentation (`no_data_augmentation_all_channels` and `no_data_augmentation_single_channel`)
 
 ### Run center detection
-The notebook 'perd_mask_view.ipynb' load every data according to our masks predictions and perform the center detection. Then it will write all detected coordinates in a csv file named 'predictions_annotation.csv' which will be located in 'dataset/single-channel-images' folder.
+The notebook `perd_mask_view.ipynb` load every data according to our masks predictions and perform the center detection. Then it will write all detected coordinates in a csv file named `predictions_annotation.csv` which will be located in `dataset/single-channel-images` folder.
        
 ### Run Matching
 The notebook `matching.ipynb` shows and explains our matching procedure, everything from loading the tif image to using StarDist and creating a matching. 
