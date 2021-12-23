@@ -19,6 +19,7 @@ four centrioles. Our approach is also evaluated at all stages, except for
 nuclei segmentation.
 
 ## Run
+First downloaded the data to get the tif’s, run the U-Net to get predictions, run center detection to get centrioles and run the matching to assign centrioles to nuclei. 
 ### Download the data
 Download the data in this drive: https://drive.google.com/drive/folders/1pQUSt-qwXfVtIBig7JElVzEM0tWha2I0?usp=sharing.
 
@@ -37,9 +38,6 @@ $root
 
 ### Install requirement
 run : [pip install -r requirements.txt]
-
-## Run
-First downloaded the data to get the tif’s, run the U-Net to get predictions, run center detection to get centrioles and run the matching to assign centrioles to nuclei. 
 
 ### Run U-Net
 To run the test of the U-Net and give out predictions use the following command inside the `src` folder:
