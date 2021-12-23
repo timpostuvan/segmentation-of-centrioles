@@ -86,6 +86,15 @@ if __name__ == '__main__':
     train_masks, val_masks = train_test_split(all_masks, test_size=0.2)
     val_masks, test_masks = train_test_split(val_masks, test_size=0.5)
 
+    # a modification so it works on Windows as well
+    for c, mask in enumerate(train_masks):
+        train_masks[c] = mask.replace(os.sep, '/')
+    for c, mask in enumerate(val_masks):
+        val_masks[c] = mask.replace(os.sep, '/')
+    for c, mask in enumerate(test_masks):
+        test_masks[c] = mask.replace(os.sep, '/')
+
+
     train_images = [f'{image_path}/{mask.split("/")[-1][:-9]}.{image_format}' for mask in train_masks] 
     val_images = [f'{image_path}/{mask.split("/")[-1][:-9]}.{image_format}' for mask in val_masks] 
     test_images = [f'{image_path}/{mask.split("/")[-1][:-9]}.{image_format}' for mask in test_masks] 
