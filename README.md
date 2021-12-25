@@ -7,7 +7,7 @@ This repository contains the code for the second ML project 2 ML4Science, perfor
 * Tim Poštuvan: tim.postuvan@epfl.ch
 
 ## Project Description
-Determination of the number of centrioles is central to better understand their role in cancer since centrosome amplification often occurs in cancer cells. To detect centrioles, we propose an approach based on semantic segmentation of centrioles. Furthermore, we segment nuclei and assign centrioles to them in an unsupervised manner. The assignment is done by defining the problem as minimum weight matching in bipartite graph with prior greedy matching. This allows us to incorporate domain knowledge that each nucleus can have at most four centrioles. Our approach is also evaluated at all stages, except for nuclei segmentation one. 
+Determination of the number of centrioles is central to better understand their role in cancer since centrosome amplification often occurs in cancer cells. To detect centrioles, we propose an approach based on semantic segmentation of centrioles. Furthermore, we segment nuclei and assign centrioles to them in an unsupervised manner. The assignment is done by defining the problem as minimum weight matching in a bipartite graph with prior greedy matching. This allows us to incorporate domain knowledge that each nucleus can have at most four centrioles. Our approach is also evaluated at all stages, except for nuclei segmentation one. 
 
 ### Install requirements
 Run : 
